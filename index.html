@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>FatCow icons</title>
-<meta name="description" content="FatCow icons finder">
-<meta name="revised" content="05/13/2014">
+<title>FatCow Farm-Fresh icons finder</title>
+<meta name="description" content="FatCow Farm-Fresh icons finder">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
 body {
   background-image: url(http://wmh.github.io/hunbook/_static/img/noise.png);
@@ -44,9 +42,9 @@ ul.navbar-nav li.active {
 <body>
 <div class="container">
   <div class="masthead">
-    <h1>FatCow Farm-Fresh Web Icons</h1>
+    <h1>FatCow Farm-Fresh Icons Finder</h1>
     <p>This amazing set is kindly offered by <a href="http://www.fatcow.com/free-icons">FatCow</a><br/>
-      This icons browser is an adaptation of <a href="https://github.com/wmh/hunbook">Hunter Wu's work</a>, to make it up-to-date with latest FatCow icons set.
+      The icons finder is an adaptation of <a href="https://github.com/wmh/hunbook">Hunter Wu's work</a>, to make it up-to-date with latest FatCow icons set.
     </p>
   </div>
 </div>
@@ -87,7 +85,8 @@ function showIcons() {
     if (filter !== '' && icons[i].indexOf(filter) == -1) {
       continue;
     }
-    images += '<img src="FatCow_Icons32x32/' + icons[i] + '.png" title="'+ icons[i] +'" class="large"><img src="FatCow_Icons16x16/' + icons[i] + '.png" title="'+ icons[i] +'" class="small">';
+    images += '<a href="FatCow_Icons32x32/' + icons[i] + '_32.png" download><img src="FatCow_Icons32x32/' + icons[i] + '_32.png" title="'+ icons[i] +' (32px)" class="large"></a>';
+    images += '<a href="FatCow_Icons16x16/' + icons[i] + '_16.png" download><img src="FatCow_Icons16x16/' + icons[i] + '_16.png" title="'+ icons[i] +' (16px)" class="small"></a>';
   }
   lastFilter = filter;
   $('#image-container').html(images);
